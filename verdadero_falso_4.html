@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test de Verdadero/Falso (Preguntas 1-6)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Test de Verdadero/Falso (Preguntas 1-6)</h1>
+
+    <form id="testForm">
+        <!-- Pregunta 1 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 1:</strong> En redes de área local (LAN), cada uno de los nodos de la red ha de tener asignada una dirección IP diferente.</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p1" value="Verdadero"> Verdadero</label><br>
+                <label><input type="radio" name="p1" value="Falso"> Falso</label>
+            </div>
+            <div class="feedback" id="feedback1"></div>
+        </div>
+
+        <!-- Pregunta 2 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 2:</strong> Podemos añadir un usuario al sistema con la orden useradd, y cambiar su contraseña con la orden passwd.</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p2" value="Verdadero"> Verdadero</label><br>
+                <label><input type="radio" name="p2" value="Falso"> Falso</label>
+            </div>
+            <div class="feedback" id="feedback2"></div>
+        </div>
+
+        <!-- Pregunta 3 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 3:</strong> Los parámetros mínimos para poder configurar el acceso a internet en Linux, son la IP del ordenador y la IP del router.</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p3" value="Verdadero"> Verdadero</label><br>
+                <label><input type="radio" name="p3" value="Falso"> Falso</label>
+            </div>
+            <div class="feedback" id="feedback3"></div>
+        </div>
+
+        <!-- Pregunta 4 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 4:</strong> Con la herramienta de administración de usuarios y grupos del entorno gráfico, sólo podemos crear usuarios y grupos, pero no especificar sus privilegios.</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p4" value="Verdadero"> Verdadero</label><br>
+                <label><input type="radio" name="p4" value="Falso"> Falso</label>
+            </div>
+            <div class="feedback" id="feedback4"></div>
+        </div>
+
+        <!-- Pregunta 5 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 5:</strong> La orden ifconfig permite comprobar y configurar el protocolo TCP/IP desde la línea de órdenes en sistemas Linux.</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p5" value="Verdadero"> Verdadero</label><br>
+                <label><input type="radio" name="p5" value="Falso"> Falso</label>
+            </div>
+            <div class="feedback" id="feedback5"></div>
+        </div>
+
+        <!-- Pregunta 6 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 6:</strong> Los perfiles de usuario locales permiten modificar el directorio personal y el intérprete de órdenes.</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p6" value="Verdadero"> Verdadero</label><br>
+                <label><input type="radio" name="p6" value="Falso"> Falso</label>
+            </div>
+            <div class="feedback" id="feedback6"></div>
+        </div>
+
+        <!-- Botón para calcular la nota -->
+        <button type="button" onclick="calcularNota()">Calcular nota</button>
+    </form>
+
+    <!-- Resultado -->
+    <div class="resultado" id="resultado"></div>
+
+    <script>
+        // Respuestas correctas
+        const respuestasCorrectas = {
+            p1: "Verdadero", // En una LAN, cada nodo debe tener una IP única.
+            p2: "Verdadero", // useradd y passwd son órdenes válidas en Linux.
+            p3: "Falso", // Se necesitan más parámetros, como la máscara de red y el DNS.
+            p4: "Falso", // Las herramientas gráficas permiten especificar privilegios.
+            p5: "Verdadero", // ifconfig permite configurar TCP/IP en Linux.
+            p6: "Verdadero", // Los perfiles de usuario permiten modificar el directorio y el intérprete.
+        };
+
+        // Función para calcular la nota
+        function calcularNota() {
+            let puntuacion = 0;
+            const totalPreguntas = Object.keys(respuestasCorrectas).length;
+
+            // Recorrer las preguntas y comparar respuestas
+            for (const pregunta in respuestasCorrectas) {
+                const respuestaSeleccionada = document.querySelector(`input[name="${pregunta}"]:checked`);
+                const feedbackDiv = document.getElementById(`feedback${pregunta.substring(1)}`);
+
+                if (respuestaSeleccionada) {
+                    if (respuestaSeleccionada.value === respuestasCorrectas[pregunta]) {
+                        puntuacion++;
+                        feedbackDiv.innerHTML = `<span class="correcta">Correcto: ${respuestaSeleccionada.value}</span>`;
+                    } else {
+                        feedbackDiv.innerHTML = `<span class="incorrecta">Incorrecto. La respuesta correcta es: ${respuestasCorrectas[pregunta]}</span>`;
+                    }
+                } else {
+                    feedbackDiv.innerHTML = `<span class="incorrecta">No has seleccionado una respuesta. La respuesta correcta es: ${respuestasCorrectas[pregunta]}</span>`;
+                }
+            }
+
+            // Calcular la nota sobre 10
+            const nota = (puntuacion / totalPreguntas) * 10;
+
+            // Mostrar el resultado
+            const resultadoDiv = document.getElementById("resultado");
+            resultadoDiv.innerHTML = `Tu nota es: <span class="${nota >= 5 ? 'correcta' : 'incorrecta'}">${nota.toFixed(2)}/10</span>`;
+        }
+    </script>
+</body>
+</html>

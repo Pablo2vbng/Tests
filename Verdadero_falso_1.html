@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test de Verdadero/Falso (Preguntas 1-6)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Test de Verdadero/Falso (Preguntas 1-6)</h1>
+
+    <form id="testForm">
+        <!-- Pregunta 1 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 1:</strong> La cantidad de aplicaciones que un equipo puede estar ejecutando al mismo tiempo depende del tamaño de almacenamiento de la memoria, así como de su velocidad de lectura y escritura.</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p1" value="Verdadero"> Verdadero</label><br>
+                <label><input type="radio" name="p1" value="Falso"> Falso</label>
+            </div>
+            <div class="feedback" id="feedback1"></div>
+        </div>
+
+        <!-- Pregunta 2 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 2:</strong> Fallo físico o mala configuración de la electrónica de red y defectos en el software de la máquina afectada pueden, entre otros, ser la causa de los errores en un sistema informático.</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p2" value="Verdadero"> Verdadero</label><br>
+                <label><input type="radio" name="p2" value="Falso"> Falso</label>
+            </div>
+            <div class="feedback" id="feedback2"></div>
+        </div>
+
+        <!-- Pregunta 3 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 3:</strong> Dada la rápida evolución del software y sus necesidades de rendimiento, no es habitual encontrar equipos que no puedan soportar las necesidades de procesamiento de un programa, y que no tengan memoria RAM suficiente.</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p3" value="Verdadero"> Verdadero</label><br>
+                <label><input type="radio" name="p3" value="Falso"> Falso</label>
+            </div>
+            <div class="feedback" id="feedback3"></div>
+        </div>
+
+        <!-- Pregunta 4 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 4:</strong> El hardware es el conjunto de máquinas que permite, directa o indirectamente, automatizar la resolución del problema siguiendo las instrucciones de los programas.</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p4" value="Verdadero"> Verdadero</label><br>
+                <label><input type="radio" name="p4" value="Falso"> Falso</label>
+            </div>
+            <div class="feedback" id="feedback4"></div>
+        </div>
+
+        <!-- Pregunta 5 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 5:</strong> Los ordenadores están formados por dispositivos que se relacionan unos con otros formando una arquitectura y cada ordenador tiene su propia arquitectura; sin embargo, elementos como CPU, BIOS, RAM, interfaces y buses son comunes a la gran mayoría.</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p5" value="Verdadero"> Verdadero</label><br>
+                <label><input type="radio" name="p5" value="Falso"> Falso</label>
+            </div>
+            <div class="feedback" id="feedback5"></div>
+        </div>
+
+        <!-- Pregunta 6 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 6:</strong> En la actualidad, solo es necesaria una única infraestructura digital, la misma que comunica a los sistemas informáticos para poder transportar todos los servicios de comunicaciones presentes y futuros en un edificio empresarial.</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p6" value="Verdadero"> Verdadero</label><br>
+                <label><input type="radio" name="p6" value="Falso"> Falso</label>
+            </div>
+            <div class="feedback" id="feedback6"></div>
+        </div>
+
+        <!-- Botón para calcular la nota -->
+        <button type="button" onclick="calcularNota()">Calcular nota</button>
+    </form>
+
+    <!-- Resultado -->
+    <div class="resultado" id="resultado"></div>
+
+    <script>
+        // Respuestas correctas
+        const respuestasCorrectas = {
+            p1: "Verdadero", // La cantidad de aplicaciones depende de la memoria.
+            p2: "Verdadero", // Fallos físicos o de configuración pueden causar errores.
+            p3: "Falso", // Es habitual encontrar equipos que no soportan software moderno.
+            p4: "Falso", // El hardware no es solo el conjunto de máquinas.
+            p5: "Verdadero", // Elementos como CPU, BIOS, RAM, etc., son comunes.
+            p6: "Falso", // No es suficiente una única infraestructura digital.
+        };
+
+        // Función para calcular la nota
+        function calcularNota() {
+            let puntuacion = 0;
+            const totalPreguntas = Object.keys(respuestasCorrectas).length;
+
+            // Recorrer las preguntas y comparar respuestas
+            for (const pregunta in respuestasCorrectas) {
+                const respuestaSeleccionada = document.querySelector(`input[name="${pregunta}"]:checked`);
+                const feedbackDiv = document.getElementById(`feedback${pregunta.substring(1)}`);
+
+                if (respuestaSeleccionada) {
+                    if (respuestaSeleccionada.value === respuestasCorrectas[pregunta]) {
+                        puntuacion++;
+                        feedbackDiv.innerHTML = `<span class="correcta">Correcto: ${respuestaSeleccionada.value}</span>`;
+                    } else {
+                        feedbackDiv.innerHTML = `<span class="incorrecta">Incorrecto. La respuesta correcta es: ${respuestasCorrectas[pregunta]}</span>`;
+                    }
+                } else {
+                    feedbackDiv.innerHTML = `<span class="incorrecta">No has seleccionado una respuesta. La respuesta correcta es: ${respuestasCorrectas[pregunta]}</span>`;
+                }
+            }
+
+            // Calcular la nota sobre 10
+            const nota = (puntuacion / totalPreguntas) * 10;
+
+            // Mostrar el resultado
+            const resultadoDiv = document.getElementById("resultado");
+            resultadoDiv.innerHTML = `Tu nota es: <span class="${nota >= 5 ? 'correcta' : 'incorrecta'}">${nota.toFixed(2)}/10</span>`;
+        }
+    </script>
+</body>
+</html>

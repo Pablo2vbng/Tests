@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test de Informática (Preguntas 1-10)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Test de Informática (Preguntas 1-10)</h1>
+
+    <form id="testForm">
+        <!-- Pregunta 1 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 1:</strong> Todas las aplicaciones que instalamos en Linux tienen el mismo tipo de licencia.</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p1" value="a"> a. Si, a todas se les aplica el mismo tipo de licencia.</label><br>
+                <label><input type="radio" name="p1" value="b"> b. Se les aplica la misma licencia que al sistema operativo.</label><br>
+                <label><input type="radio" name="p1" value="c"> c. La licencia dependerá de la aplicación.</label><br>
+                <label><input type="radio" name="p1" value="d"> d. Las aplicaciones en Linux no necesitan licencia.</label>
+            </div>
+            <div class="feedback" id="feedback1"></div>
+        </div>
+
+        <!-- Pregunta 2 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 2:</strong> Todas las aplicaciones que instalamos en sistemas operativos propietarios tienen el mismo tipo de licencia.</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p2" value="a"> a. Si, a todas se les aplica el mismo tipo de licencia.</label><br>
+                <label><input type="radio" name="p2" value="b"> b. Se les aplica la misma licencia que al sistema operativo.</label><br>
+                <label><input type="radio" name="p2" value="c"> c. La licencia dependerá de la aplicación.</label><br>
+                <label><input type="radio" name="p2" value="d"> d. Ninguno de los anteriores.</label>
+            </div>
+            <div class="feedback" id="feedback2"></div>
+        </div>
+
+        <!-- Pregunta 3 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 3:</strong> En Linux, ¿de qué gestores de paquetes disponemos mediante línea de órdenes?</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p3" value="a"> a. APT-Get y Aptitude.</label><br>
+                <label><input type="radio" name="p3" value="b"> b. APT-Get.</label><br>
+                <label><input type="radio" name="p3" value="c"> c. Aptitude.</label><br>
+                <label><input type="radio" name="p3" value="d"> d. Ninguno de los anteriores.</label>
+            </div>
+            <div class="feedback" id="feedback3"></div>
+        </div>
+
+        <!-- Pregunta 4 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 4:</strong> En Linux, ¿de qué gestores de paquetes disponemos mediante entorno gráfico?</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p4" value="a"> a. Aptitude.</label><br>
+                <label><input type="radio" name="p4" value="b"> b. APT-Get.</label><br>
+                <label><input type="radio" name="p4" value="c"> c. Synaptic.</label><br>
+                <label><input type="radio" name="p4" value="d"> d. Ninguno de los anteriores.</label>
+            </div>
+            <div class="feedback" id="feedback4"></div>
+        </div>
+
+        <!-- Pregunta 5 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 5:</strong> En Linux, puedo suprimir una aplicación…</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p5" value="a"> a. Sólo desde entorno gráfico.</label><br>
+                <label><input type="radio" name="p5" value="b"> b. Sólo desde terminal.</label><br>
+                <label><input type="radio" name="p5" value="c"> c. En terminal y en entorno gráfico.</label><br>
+                <label><input type="radio" name="p5" value="d"> d. En entorno gráfico puedo desinstalarla, pero no eliminarla, que debo hacerlo desde terminal.</label>
+            </div>
+            <div class="feedback" id="feedback5"></div>
+        </div>
+
+        <!-- Pregunta 6 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 6:</strong> La instalación de una aplicación en Windows…</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p6" value="a"> a. Se realiza mediante línea de órdenes.</label><br>
+                <label><input type="radio" name="p6" value="b"> b. Se realiza descargando la aplicación.</label><br>
+                <label><input type="radio" name="p6" value="c"> c. Se realiza con el ejecutable de la aplicación.</label><br>
+                <label><input type="radio" name="p6" value="d"> d. Se realiza en un repositorio.</label>
+            </div>
+            <div class="feedback" id="feedback6"></div>
+        </div>
+
+        <!-- Pregunta 7 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 7:</strong> En entorno de sistemas operativos propietarios, no puedo encontrar aplicaciones open source.</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p7" value="a"> a. Cierto, no hay ninguna.</label><br>
+                <label><input type="radio" name="p7" value="b"> b. Depende del sistema operativo propietario.</label><br>
+                <label><input type="radio" name="p7" value="c"> c. Depende de la versión de la aplicación.</label><br>
+                <label><input type="radio" name="p7" value="d"> d. Sólo el autor de la aplicación decide este aspecto.</label>
+            </div>
+            <div class="feedback" id="feedback7"></div>
+        </div>
+
+        <!-- Pregunta 8 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 8:</strong> En Windows, puedo suprimir una aplicación completamente…</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p8" value="a"> a. No, sólo puedo desinstalarla, pero no eliminarla.</label><br>
+                <label><input type="radio" name="p8" value="b"> b. Sólo puedo suprimirla completamente desde terminal.</label><br>
+                <label><input type="radio" name="p8" value="c"> c. En entorno gráfico puedo desinstalarla, pero no eliminarla, que debo hacerlo desde terminal.</label><br>
+                <label><input type="radio" name="p8" value="d"> d. Puedo suprimirla completamente sin problema.</label>
+            </div>
+            <div class="feedback" id="feedback8"></div>
+        </div>
+
+        <!-- Pregunta 9 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 9:</strong> Según la organización de depósitos de software de UBUNTU, ¿en cuál se encuentra el software NO libre?</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p9" value="a"> a. Multiverse.</label><br>
+                <label><input type="radio" name="p9" value="b"> b. Restricted.</label><br>
+                <label><input type="radio" name="p9" value="c"> c. Main.</label><br>
+                <label><input type="radio" name="p9" value="d"> d. Universe.</label>
+            </div>
+            <div class="feedback" id="feedback9"></div>
+        </div>
+
+        <!-- Pregunta 10 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 10:</strong> ¿Cuál de los siguientes no es un gestor de paquetes en UBUNTU?</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p10" value="a"> a. APT.</label><br>
+                <label><input type="radio" name="p10" value="b"> b. APT-GET.</label><br>
+                <label><input type="radio" name="p10" value="c"> c. APTITUDE.</label><br>
+                <label><input type="radio" name="p10" value="d"> d. PAQUET.</label>
+            </div>
+            <div class="feedback" id="feedback10"></div>
+        </div>
+
+        <!-- Botón para calcular la nota -->
+        <button type="button" onclick="calcularNota()">Calcular nota</button>
+    </form>
+
+    <!-- Resultado -->
+    <div class="resultado" id="resultado"></div>
+
+    <script>
+        // Respuestas correctas
+        const respuestasCorrectas = {
+            p1: "c", // La licencia dependerá de la aplicación.
+            p2: "c", // La licencia dependerá de la aplicación.
+            p3: "a", // APT-Get y Aptitude.
+            p4: "c", // Synaptic.
+            p5: "c", // En terminal y en entorno gráfico.
+            p6: "c", // Se realiza con el ejecutable de la aplicación.
+            p7: "b", // Depende del sistema operativo propietario.
+            p8: "d", // Puedo suprimirla completamente sin problema.
+            p9: "b", // Restricted.
+            p10: "d", // PAQUET.
+        };
+
+        // Función para calcular la nota
+        function calcularNota() {
+            let puntuacion = 0;
+            const totalPreguntas = Object.keys(respuestasCorrectas).length;
+
+            // Recorrer las preguntas y comparar respuestas
+            for (const pregunta in respuestasCorrectas) {
+                const respuestaSeleccionada = document.querySelector(`input[name="${pregunta}"]:checked`);
+                const feedbackDiv = document.getElementById(`feedback${pregunta.substring(1)}`);
+
+                if (respuestaSeleccionada) {
+                    if (respuestaSeleccionada.value === respuestasCorrectas[pregunta]) {
+                        puntuacion++;
+                        feedbackDiv.innerHTML = `<span class="correcta">Correcto: ${respuestaSeleccionada.value}</span>`;
+                    } else {
+                        feedbackDiv.innerHTML = `<span class="incorrecta">Incorrecto. La respuesta correcta es: ${respuestasCorrectas[pregunta]}</span>`;
+                    }
+                } else {
+                    feedbackDiv.innerHTML = `<span class="incorrecta">No has seleccionado una respuesta. La respuesta correcta es: ${respuestasCorrectas[pregunta]}</span>`;
+                }
+            }
+
+            // Calcular la nota sobre 10
+            const nota = (puntuacion / totalPreguntas) * 10;
+
+            // Mostrar el resultado
+            const resultadoDiv = document.getElementById("resultado");
+            resultadoDiv.innerHTML = `Tu nota es: <span class="${nota >= 5 ? 'correcta' : 'incorrecta'}">${nota.toFixed(2)}/10</span>`;
+        }
+    </script>
+</body>
+</html>

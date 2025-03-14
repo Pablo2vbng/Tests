@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test de Informática (Preguntas 1-10)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Test de Informática (Preguntas 1-10)</h1>
+
+    <form id="testForm">
+        <!-- Pregunta 1 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 1:</strong> Las actualizaciones del sistema operativo libre…</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p1" value="a"> a. Tienen que estar desactivadas para evitar que entren virus en el sistema.</label><br>
+                <label><input type="radio" name="p1" value="b"> b. Deben estar automatizadas, activando la opción de que nos avise cuando estén disponibles.</label><br>
+                <label><input type="radio" name="p1" value="c"> c. Sólo se pueden hacer de forma manual.</label><br>
+                <label><input type="radio" name="p1" value="d"> d. Ninguna de las respuestas anteriores.</label>
+            </div>
+            <div class="feedback" id="feedback1"></div>
+        </div>
+
+        <!-- Pregunta 2 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 2:</strong> La instalación de un sistema operativo libre…</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p2" value="a"> a. Se realiza con apt-get.</label><br>
+                <label><input type="radio" name="p2" value="b"> b. Se realiza en un espacio libre no particionado.</label><br>
+                <label><input type="radio" name="p2" value="c"> c. Se realiza con una imagen ISO.</label><br>
+                <label><input type="radio" name="p2" value="d"> d. Se realiza en un repositorio.</label>
+            </div>
+            <div class="feedback" id="feedback2"></div>
+        </div>
+
+        <!-- Pregunta 3 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 3:</strong> La preparación del disco para la instalación de un sistema libre se hace en…</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p3" value="a"> a. Se realiza con apt-get.</label><br>
+                <label><input type="radio" name="p3" value="b"> b. Se realiza en un espacio libre no particionado.</label><br>
+                <label><input type="radio" name="p3" value="c"> c. Se realiza con una imagen ISO.</label><br>
+                <label><input type="radio" name="p3" value="d"> d. Se realiza en un repositorio.</label>
+            </div>
+            <div class="feedback" id="feedback3"></div>
+        </div>
+
+        <!-- Pregunta 4 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 4:</strong> ¿Cuál de los siguientes es el principal gestor de arranque en Linux?</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p4" value="a"> a. Synaptic.</label><br>
+                <label><input type="radio" name="p4" value="b"> b. Inittab.</label><br>
+                <label><input type="radio" name="p4" value="c"> c. gconf-editor.</label><br>
+                <label><input type="radio" name="p4" value="d"> d. Grub.</label>
+            </div>
+            <div class="feedback" id="feedback4"></div>
+        </div>
+
+        <!-- Pregunta 5 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 5:</strong> ¿Cuál es el fichero de inicio del sistema en Linux?</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p5" value="a"> a. Synaptic.</label><br>
+                <label><input type="radio" name="p5" value="b"> b. Inittab.</label><br>
+                <label><input type="radio" name="p5" value="c"> c. gconf-editor.</label><br>
+                <label><input type="radio" name="p5" value="d"> d. Grub.</label>
+            </div>
+            <div class="feedback" id="feedback5"></div>
+        </div>
+
+        <!-- Pregunta 6 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 6:</strong> ¿Qué suele almacenar un tipo de fichero logfile en los sistemas?</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p6" value="a"> a. El inicio de los sistemas operativos de Mac.</label><br>
+                <label><input type="radio" name="p6" value="b"> b. El inicio de los sistemas operativos Windows.</label><br>
+                <label><input type="radio" name="p6" value="c"> c. El inicio de los sistemas operativos Linux.</label><br>
+                <label><input type="radio" name="p6" value="d"> d. Contiene información detallada sobre eventos, operaciones o actividades dentro de un sistema.</label>
+            </div>
+            <div class="feedback" id="feedback6"></div>
+        </div>
+
+        <!-- Pregunta 7 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 7:</strong> Los controladores de dispositivos se pueden obtener…</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p7" value="a"> a. De la propia distribución del sistema operativo.</label><br>
+                <label><input type="radio" name="p7" value="b"> b. De los repositorios del fabricante del sistema operativo.</label><br>
+                <label><input type="radio" name="p7" value="c"> c. De los repositorios de los fabricantes de los dispositivos.</label><br>
+                <label><input type="radio" name="p7" value="d"> d. Todas las respuestas anteriores son correctas.</label>
+            </div>
+            <div class="feedback" id="feedback7"></div>
+        </div>
+
+        <!-- Pregunta 8 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 8:</strong> Dentro de los sistemas operativos propietarios en arquitectura Intel, tenemos, básicamente, las siguientes opciones:</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p8" value="a"> a. Windows.</label><br>
+                <label><input type="radio" name="p8" value="b"> b. Mac OS.</label><br>
+                <label><input type="radio" name="p8" value="c"> c. Ambas opciones.</label><br>
+                <label><input type="radio" name="p8" value="d"> d. Ninguna de las opciones.</label>
+            </div>
+            <div class="feedback" id="feedback8"></div>
+        </div>
+
+        <!-- Pregunta 9 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 9:</strong> El código que es de uso libre y que se pretende que siga siéndolo, aunque se hagan modificaciones en el mismo se recoge bajo el concepto de:</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p9" value="a"> a. Copyright.</label><br>
+                <label><input type="radio" name="p9" value="b"> b. Copyleft.</label><br>
+                <label><input type="radio" name="p9" value="c"> c. Dominio público.</label><br>
+                <label><input type="radio" name="p9" value="d"> d. GNU.</label>
+            </div>
+            <div class="feedback" id="feedback9"></div>
+        </div>
+
+        <!-- Pregunta 10 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 10:</strong> En relación al software opensource o software de código abierto, selecciona la respuesta correcta:</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p10" value="a"> a. No hace público su código fuente.</label><br>
+                <label><input type="radio" name="p10" value="b"> b. Si hace público su código fuente.</label><br>
+                <label><input type="radio" name="p10" value="c"> c. Siempre es software libre.</label><br>
+                <label><input type="radio" name="p10" value="d"> d. Siempre es software propietario.</label>
+            </div>
+            <div class="feedback" id="feedback10"></div>
+        </div>
+
+        <!-- Botón para calcular la nota -->
+        <button type="button" onclick="calcularNota()">Calcular nota</button>
+    </form>
+
+    <!-- Resultado -->
+    <div class="resultado" id="resultado"></div>
+
+    <script>
+        // Respuestas correctas
+        const respuestasCorrectas = {
+            p1: "b", // Deben estar automatizadas, activando la opción de que nos avise cuando estén disponibles.
+            p2: "c", // Se realiza con una imagen ISO.
+            p3: "b", // Se realiza en un espacio libre no particionado.
+            p4: "d", // Grub.
+            p5: "b", // Inittab.
+            p6: "d", // Contiene información detallada sobre eventos, operaciones o actividades dentro de un sistema.
+            p7: "d", // Todas las respuestas anteriores son correctas.
+            p8: "c", // Ambas opciones.
+            p9: "b", // Copyleft.
+            p10: "b", // Si hace público su código fuente.
+        };
+
+        // Función para calcular la nota
+        function calcularNota() {
+            let puntuacion = 0;
+            const totalPreguntas = Object.keys(respuestasCorrectas).length;
+
+            // Recorrer las preguntas y comparar respuestas
+            for (const pregunta in respuestasCorrectas) {
+                const respuestaSeleccionada = document.querySelector(`input[name="${pregunta}"]:checked`);
+                const feedbackDiv = document.getElementById(`feedback${pregunta.substring(1)}`);
+
+                if (respuestaSeleccionada) {
+                    if (respuestaSeleccionada.value === respuestasCorrectas[pregunta]) {
+                        puntuacion++;
+                        feedbackDiv.innerHTML = `<span class="correcta">Correcto: ${respuestaSeleccionada.value}</span>`;
+                    } else {
+                        feedbackDiv.innerHTML = `<span class="incorrecta">Incorrecto. La respuesta correcta es: ${respuestasCorrectas[pregunta]}</span>`;
+                    }
+                } else {
+                    feedbackDiv.innerHTML = `<span class="incorrecta">No has seleccionado una respuesta. La respuesta correcta es: ${respuestasCorrectas[pregunta]}</span>`;
+                }
+            }
+
+            // Calcular la nota sobre 10
+            const nota = (puntuacion / totalPreguntas) * 10;
+
+            // Mostrar el resultado
+            const resultadoDiv = document.getElementById("resultado");
+            resultadoDiv.innerHTML = `Tu nota es: <span class="${nota >= 5 ? 'correcta' : 'incorrecta'}">${nota.toFixed(2)}/10</span>`;
+        }
+    </script>
+</body>
+</html>

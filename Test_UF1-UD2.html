@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test de Informática Completo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Test de Informática Completo</h1>
+
+    <form id="testForm">
+        <!-- Pregunta 1 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 1:</strong> La ruta /var/log/messages</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p1" value="a"> a. Es la ubicación de un archivo.</label><br>
+                <label><input type="radio" name="p1" value="b"> b. Es una ruta relativa.</label><br>
+                <label><input type="radio" name="p1" value="c"> c. Es una ruta absoluta.</label><br>
+                <label><input type="radio" name="p1" value="d"> d. Ninguna de las anteriores.</label>
+            </div>
+            <div class="feedback" id="feedback1"></div>
+        </div>
+
+        <!-- Pregunta 2 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 2:</strong> Si, en el terminal de Linux, estáis en /home/estudiante1 y queréis ir a /home/estudiante2, ¿cuáles de las siguientes órdenes os llevarán?</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p2" value="a"> a. cd estudiante2.</label><br>
+                <label><input type="radio" name="p2" value="b"> b. cd ../estudiante2.</label><br>
+                <label><input type="radio" name="p2" value="c"> c. cd ..\estudiante2.</label><br>
+                <label><input type="radio" name="p2" value="d"> d. ls /home/estudiante2.</label>
+            </div>
+            <div class="feedback" id="feedback2"></div>
+        </div>
+
+        <!-- Pregunta 3 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 3:</strong> En Windows, ¿cuál es la orden que lista todos los ficheros que empiezan por “a” y tienen extensión txt en el directorio actual?</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p3" value="a"> a. dir *a*.txt.</label><br>
+                <label><input type="radio" name="p3" value="b"> b. dir a**.txt.</label><br>
+                <label><input type="radio" name="p3" value="c"> c. dir a*.txt*.</label><br>
+                <label><input type="radio" name="p3" value="d"> d. dir a*.txt.</label>
+            </div>
+            <div class="feedback" id="feedback3"></div>
+        </div>
+
+        <!-- Pregunta 4 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 4:</strong> La memoria que se utiliza cuando no hay suficiente espacio en la memoria principal del sistema se llama:</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p4" value="a"> a. Swap.</label><br>
+                <label><input type="radio" name="p4" value="b"> b. Archivo de paginación.</label><br>
+                <label><input type="radio" name="p4" value="c"> c. Memoria virtual (Cache).</label><br>
+                <label><input type="radio" name="p4" value="d"> d. ROM.</label>
+            </div>
+            <div class="feedback" id="feedback4"></div>
+        </div>
+
+        <!-- Pregunta 5 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 5:</strong> Un fichero informático es lo mismo que un archivo:</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p5" value="a"> a. Si.</label><br>
+                <label><input type="radio" name="p5" value="b"> b. No.</label><br>
+                <label><input type="radio" name="p5" value="c"> c. Sólo para archivos de texto.</label><br>
+                <label><input type="radio" name="p5" value="d"> d. Sólo para páginas HTML.</label>
+            </div>
+            <div class="feedback" id="feedback5"></div>
+        </div>
+
+        <!-- Pregunta 6 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 6:</strong> Un directorio es:</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p6" value="a"> a. Un archivo.</label><br>
+                <label><input type="radio" name="p6" value="b"> b. Un fichero.</label><br>
+                <label><input type="radio" name="p6" value="c"> c. Una carpeta.</label><br>
+                <label><input type="radio" name="p6" value="d"> d. Un archivo, un fichero y una carpeta.</label>
+            </div>
+            <div class="feedback" id="feedback6"></div>
+        </div>
+
+        <!-- Pregunta 7 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 7:</strong> Si tenemos un fichero en un USB externo, elija la respuesta correcta:</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p7" value="a"> a. Si lo borramos lo podemos recuperar desde la papelera de Windows.</label><br>
+                <label><input type="radio" name="p7" value="b"> b. Si lo borramos lo podemos recuperar desde la papelera del dispositivo.</label><br>
+                <label><input type="radio" name="p7" value="c"> c. Si guardamos los posibles cambios, estos permanecen en el archivo.</label><br>
+                <label><input type="radio" name="p7" value="d"> d. Si desconectamos el USB se elimina el archivo.</label>
+            </div>
+            <div class="feedback" id="feedback7"></div>
+        </div>
+
+        <!-- Pregunta 8 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 8:</strong> ¿Qué extensión no corresponde con un fichero de texto?</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p8" value="a"> a. docx.</label><br>
+                <label><input type="radio" name="p8" value="b"> b. iso.</label><br>
+                <label><input type="radio" name="p8" value="c"> c. txt.</label><br>
+                <label><input type="radio" name="p8" value="d"> d. rtf.</label>
+            </div>
+            <div class="feedback" id="feedback8"></div>
+        </div>
+
+        <!-- Pregunta 9 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 9:</strong> ¿Qué extensión no corresponde a un archivo ejecutable?</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p9" value="a"> a. msi.</label><br>
+                <label><input type="radio" name="p9" value="b"> b. rar.</label><br>
+                <label><input type="radio" name="p9" value="c"> c. pkg.</label><br>
+                <label><input type="radio" name="p9" value="d"> d. deb.</label>
+            </div>
+            <div class="feedback" id="feedback9"></div>
+        </div>
+
+        <!-- Pregunta 10 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 10:</strong> ¿Qué extensión no corresponde a un archivo comprimido?</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p10" value="a"> a. 7z.</label><br>
+                <label><input type="radio" name="p10" value="b"> b. rar.</label><br>
+                <label><input type="radio" name="p10" value="c"> c. 7up.</label><br>
+                <label><input type="radio" name="p10" value="d"> d. zip.</label>
+            </div>
+            <div class="feedback" id="feedback10"></div>
+        </div>
+
+        <!-- Pregunta 11 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 11:</strong> ¿Qué extensión no corresponde a un archivo para ficheros web?</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p11" value="a"> a. rtf.</label><br>
+                <label><input type="radio" name="p11" value="b"> b. xml.</label><br>
+                <label><input type="radio" name="p11" value="c"> c. htm.</label><br>
+                <label><input type="radio" name="p11" value="d"> d. css.</label>
+            </div>
+            <div class="feedback" id="feedback11"></div>
+        </div>
+
+        <!-- Pregunta 12 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 12:</strong> ¿Qué comando de la consola de Windows permite navegar por la estructura de carpetas del sistema?</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p12" value="a"> a. cd.</label><br>
+                <label><input type="radio" name="p12" value="b"> b. ls.</label><br>
+                <label><input type="radio" name="p12" value="c"> c. rename.</label><br>
+                <label><input type="radio" name="p12" value="d"> d. dr.</label>
+            </div>
+            <div class="feedback" id="feedback12"></div>
+        </div>
+
+        <!-- Pregunta 13 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 13:</strong> ¿Qué comando de la consola de Windows permite listar los contenidos de una carpeta?</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p13" value="a"> a. cd.</label><br>
+                <label><input type="radio" name="p13" value="b"> b. ls.</label><br>
+                <label><input type="radio" name="p13" value="c"> c. rename.</label><br>
+                <label><input type="radio" name="p13" value="d"> d. dir.</label>
+            </div>
+            <div class="feedback" id="feedback13"></div>
+        </div>
+
+        <!-- Pregunta 14 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 14:</strong> ¿Qué hace el comando sudo en un terminal de Linux?</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p14" value="a"> a. Se utiliza para borrar un archivo.</label><br>
+                <label><input type="radio" name="p14" value="b"> b. Se utiliza para ejecutar un comando con privilegios de superusuario o administrador.</label><br>
+                <label><input type="radio" name="p14" value="c"> c. Se utiliza para renombrar un archivo.</label><br>
+                <label><input type="radio" name="p14" value="d"> d. Se utiliza para renombrar un directorio.</label>
+            </div>
+            <div class="feedback" id="feedback14"></div>
+        </div>
+
+        <!-- Pregunta 15 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 15:</strong> En un terminal de Linux, ¿qué hace el comando file?</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p15" value="a"> a. Se utiliza para borrar un archivo.</label><br>
+                <label><input type="radio" name="p15" value="b"> b. Se utiliza para ejecutar un comando con privilegios de superusuario o administrador.</label><br>
+                <label><input type="radio" name="p15" value="c"> c. Se utiliza para renombrar un archivo.</label><br>
+                <label><input type="radio" name="p15" value="d"> d. Se utiliza para obtener información de un archivo en cuestión.</label>
+            </div>
+            <div class="feedback" id="feedback15"></div>
+        </div>
+
+        <!-- Botón para calcular la nota -->
+        <button type="button" onclick="calcularNota()">Calcular nota</button>
+    </form>
+
+    <!-- Resultado -->
+    <div class="resultado" id="resultado"></div>
+
+    <script>
+        // Respuestas correctas
+        const respuestasCorrectas = {
+            p1: "c", // Es una ruta absoluta
+            p2: "b", // cd ../estudiante2
+            p3: "d", // dir a*.txt
+            p4: "a", // Swap
+            p5: "a", // Si
+            p6: "c", // Una carpeta
+            p7: "c", // Si guardamos los posibles cambios, estos permanecen en el archivo
+            p8: "b", // iso
+            p9: "b", // rar
+            p10: "c", // 7up
+            p11: "a", // rtf
+            p12: "a", // cd
+            p13: "d", // dir
+            p14: "b", // Se utiliza para ejecutar un comando con privilegios de superusuario o administrador
+            p15: "d", // Se utiliza para obtener información de un archivo en cuestión
+        };
+
+        // Función para calcular la nota
+        function calcularNota() {
+            let puntuacion = 0;
+            const totalPreguntas = Object.keys(respuestasCorrectas).length;
+
+            // Recorrer las preguntas y comparar respuestas
+            for (const pregunta in respuestasCorrectas) {
+                const respuestaSeleccionada = document.querySelector(`input[name="${pregunta}"]:checked`);
+                const feedbackDiv = document.getElementById(`feedback${pregunta.substring(1)}`);
+
+                if (respuestaSeleccionada) {
+                    if (respuestaSeleccionada.value === respuestasCorrectas[pregunta]) {
+                        puntuacion++;
+                        feedbackDiv.innerHTML = `<span class="correcta">Correcto: ${respuestaSeleccionada.value}</span>`;
+                    } else {
+                        feedbackDiv.innerHTML = `<span class="incorrecta">Incorrecto. La respuesta correcta es: ${respuestasCorrectas[pregunta]}</span>`;
+                    }
+                } else {
+                    feedbackDiv.innerHTML = `<span class="incorrecta">No has seleccionado una respuesta. La respuesta correcta es: ${respuestasCorrectas[pregunta]}</span>`;
+                }
+            }
+
+            // Calcular la nota sobre 10
+            const nota = (puntuacion / totalPreguntas) * 10;
+
+            // Mostrar el resultado
+            const resultadoDiv = document.getElementById("resultado");
+            resultadoDiv.innerHTML = `Tu nota es: <span class="${nota >= 5 ? 'correcta' : 'incorrecta'}">${nota.toFixed(2)}/10</span>`;
+        }
+    </script>
+</body>
+</html>

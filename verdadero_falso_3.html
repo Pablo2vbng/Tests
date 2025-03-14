@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test de Verdadero/Falso (Preguntas 1-6)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Test de Verdadero/Falso (Preguntas 1-6)</h1>
+
+    <form id="testForm">
+        <!-- Pregunta 1 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 1:</strong> El número de distribuciones de sistemas libres es muy reducido.</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p1" value="Verdadero"> Verdadero</label><br>
+                <label><input type="radio" name="p1" value="Falso"> Falso</label>
+            </div>
+            <div class="feedback" id="feedback1"></div>
+        </div>
+
+        <!-- Pregunta 2 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 2:</strong> Los sistemas operativos libres, como son gratuitos, no tienen licencias.</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p2" value="Verdadero"> Verdadero</label><br>
+                <label><input type="radio" name="p2" value="Falso"> Falso</label>
+            </div>
+            <div class="feedback" id="feedback2"></div>
+        </div>
+
+        <!-- Pregunta 3 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 3:</strong> En el momento de escoger una distribución para instalarla en una máquina, hemos de decidir qué distribución se adapta mejor a nuestras necesidades.</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p3" value="Verdadero"> Verdadero</label><br>
+                <label><input type="radio" name="p3" value="Falso"> Falso</label>
+            </div>
+            <div class="feedback" id="feedback3"></div>
+        </div>
+
+        <!-- Pregunta 4 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 4:</strong> En una distribución de un sistema libre, encontraréis el kernel del sistema, los gestores de entorno gráfico, y un conjunto de diversas aplicaciones.</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p4" value="Verdadero"> Verdadero</label><br>
+                <label><input type="radio" name="p4" value="Falso"> Falso</label>
+            </div>
+            <div class="feedback" id="feedback4"></div>
+        </div>
+
+        <!-- Pregunta 5 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 5:</strong> Los sistemas operativos libres no disponen de soporte para los dispositivos de hardware.</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p5" value="Verdadero"> Verdadero</label><br>
+                <label><input type="radio" name="p5" value="Falso"> Falso</label>
+            </div>
+            <div class="feedback" id="feedback5"></div>
+        </div>
+
+        <!-- Pregunta 6 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 6:</strong> Hay compatibilidad de los sistemas de pago hacia los libres, pero no al revés.</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p6" value="Verdadero"> Verdadero</label><br>
+                <label><input type="radio" name="p6" value="Falso"> Falso</label>
+            </div>
+            <div class="feedback" id="feedback6"></div>
+        </div>
+
+        <!-- Botón para calcular la nota -->
+        <button type="button" onclick="calcularNota()">Calcular nota</button>
+    </form>
+
+    <!-- Resultado -->
+    <div class="resultado" id="resultado"></div>
+
+    <script>
+        // Respuestas correctas
+        const respuestasCorrectas = {
+            p1: "Falso", // Hay muchas distribuciones de sistemas libres.
+            p2: "Falso", // Los sistemas libres sí tienen licencias (por ejemplo, GPL).
+            p3: "Verdadero", // Es importante elegir una distribución que se adapte a nuestras necesidades.
+            p4: "Verdadero", // Las distribuciones incluyen el kernel, gestores gráficos y aplicaciones.
+            p5: "Falso", // Los sistemas libres sí tienen soporte para hardware.
+            p6: "Falso", // La compatibilidad no es unilateral; puede ser bidireccional.
+        };
+
+        // Función para calcular la nota
+        function calcularNota() {
+            let puntuacion = 0;
+            const totalPreguntas = Object.keys(respuestasCorrectas).length;
+
+            // Recorrer las preguntas y comparar respuestas
+            for (const pregunta in respuestasCorrectas) {
+                const respuestaSeleccionada = document.querySelector(`input[name="${pregunta}"]:checked`);
+                const feedbackDiv = document.getElementById(`feedback${pregunta.substring(1)}`);
+
+                if (respuestaSeleccionada) {
+                    if (respuestaSeleccionada.value === respuestasCorrectas[pregunta]) {
+                        puntuacion++;
+                        feedbackDiv.innerHTML = `<span class="correcta">Correcto: ${respuestaSeleccionada.value}</span>`;
+                    } else {
+                        feedbackDiv.innerHTML = `<span class="incorrecta">Incorrecto. La respuesta correcta es: ${respuestasCorrectas[pregunta]}</span>`;
+                    }
+                } else {
+                    feedbackDiv.innerHTML = `<span class="incorrecta">No has seleccionado una respuesta. La respuesta correcta es: ${respuestasCorrectas[pregunta]}</span>`;
+                }
+            }
+
+            // Calcular la nota sobre 10
+            const nota = (puntuacion / totalPreguntas) * 10;
+
+            // Mostrar el resultado
+            const resultadoDiv = document.getElementById("resultado");
+            resultadoDiv.innerHTML = `Tu nota es: <span class="${nota >= 5 ? 'correcta' : 'incorrecta'}">${nota.toFixed(2)}/10</span>`;
+        }
+    </script>
+</body>
+</html>

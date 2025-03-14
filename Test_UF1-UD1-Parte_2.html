@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test de Informática (Preguntas 16-27)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Test de Informática (Preguntas 16-27)</h1>
+
+    <form id="testForm">
+        <!-- Pregunta 16 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 16:</strong> Los niveles de software y hardware de un ordenador son:</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p16" value="a"> a. Software de BIOS, software de usuario y sistema operativo.</label><br>
+                <label><input type="radio" name="p16" value="b"> b. Software de usuario, sistema operativo y hardware.</label><br>
+                <label><input type="radio" name="p16" value="c"> c. Software de usuario, Drivers y sistema operativo.</label><br>
+                <label><input type="radio" name="p16" value="d"> d. Software de aplicación, software de usuario y sistema operativo.</label>
+            </div>
+            <div class="feedback" id="feedback16"></div>
+        </div>
+
+        <!-- Pregunta 17 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 17:</strong> ¿Qué característica NO es propia del monitor virtual de un sistema?</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p17" value="a"> a. Tienen soporte para periféricos virtuales.</label><br>
+                <label><input type="radio" name="p17" value="b"> b. Ofrece una serie de máquinas virtuales a la capa superior si se solicitan.</label><br>
+                <label><input type="radio" name="p17" value="c"> c. Ejecutan cualquier sistema operativo compatible con el hardware.</label><br>
+                <label><input type="radio" name="p17" value="d"> d. No pueden operar con diferentes sistemas operativos.</label>
+            </div>
+            <div class="feedback" id="feedback17"></div>
+        </div>
+
+        <!-- Pregunta 18 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 18:</strong> ¿En qué modo NO es posible gestionar el hardware?</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p18" value="a"> a. Todas son falsas.</label><br>
+                <label><input type="radio" name="p18" value="b"> b. NUCLEO.</label><br>
+                <label><input type="radio" name="p18" value="c"> c. USUARIO.</label><br>
+                <label><input type="radio" name="p18" value="d"> d. KERNEL.</label>
+            </div>
+            <div class="feedback" id="feedback18"></div>
+        </div>
+
+        <!-- Pregunta 19 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 19:</strong> ¿Qué componente NO pertenece a un sistema operativo?</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p19" value="a"> a. El administrador de archivos.</label><br>
+                <label><input type="radio" name="p19" value="b"> b. El Kernel (o núcleo).</label><br>
+                <label><input type="radio" name="p19" value="c"> c. El administrador de las unidades de almacenamiento.</label><br>
+                <label><input type="radio" name="p19" value="d"> d. El administrador de memoria.</label>
+            </div>
+            <div class="feedback" id="feedback19"></div>
+        </div>
+
+        <!-- Pregunta 20 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 20:</strong> ¿Qué afirmación es cierta en una estructura cliente servidor?</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p20" value="a"> a. Ninguna es correcta.</label><br>
+                <label><input type="radio" name="p20" value="b"> b. Todos los servidores funcionan en modo kernel.</label><br>
+                <label><input type="radio" name="p20" value="c"> c. El sistema operativo no está dividido en secciones.</label><br>
+                <label><input type="radio" name="p20" value="d"> d. La única función del Kernel es gestionar la comunicación entre clientes y servidores.</label>
+            </div>
+            <div class="feedback" id="feedback20"></div>
+        </div>
+
+        <!-- Pregunta 21 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 21:</strong> El Kernel o núcleo de un sistema: Selecciona la afirmación FALSA.</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p21" value="a"> a. El kernel tiene el control sobre el ordenador.</label><br>
+                <label><input type="radio" name="p21" value="b"> b. Es un programa.</label><br>
+                <label><input type="radio" name="p21" value="c"> c. Es un componente de hardware.</label><br>
+                <label><input type="radio" name="p21" value="d"> d. Es Software.</label>
+            </div>
+            <div class="feedback" id="feedback21"></div>
+        </div>
+
+        <!-- Pregunta 22 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 22:</strong> ¿Qué componente no forma parte de una GUI?</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p22" value="a"> a. Botones y barra de herramientas.</label><br>
+                <label><input type="radio" name="p22" value="b"> b. Iconos.</label><br>
+                <label><input type="radio" name="p22" value="c"> c. Sistema de ventanas.</label><br>
+                <label><input type="radio" name="p22" value="d"> d. Interfaz CLI.</label>
+            </div>
+            <div class="feedback" id="feedback22"></div>
+        </div>
+
+        <!-- Pregunta 23 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 23:</strong> ¿Un sistema Android, para teléfonos es, generalmente…?</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p23" value="a"> a. Monousuario, multitarea, multiprocesador y centralizado.</label><br>
+                <label><input type="radio" name="p23" value="b"> b. Multiusuario, monotarea, multiprocesador y distribuido.</label><br>
+                <label><input type="radio" name="p23" value="c"> c. Monousuario, multitarea, multiprocesador y distribuido.</label><br>
+                <label><input type="radio" name="p23" value="d"> d. Multiusuario, multitarea, distribuido y monoprocesador.</label>
+            </div>
+            <div class="feedback" id="feedback23"></div>
+        </div>
+
+        <!-- Pregunta 24 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 24:</strong> ¿Un sistema Windows cliente, para ordenadores es, generalmente…?</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p24" value="a"> a. Monousuario, multitarea, multiprocesador y distribuido.</label><br>
+                <label><input type="radio" name="p24" value="b"> b. Multiusuario, monotarea, multiprocesador y distribuido.</label><br>
+                <label><input type="radio" name="p24" value="c"> c. Monousuario, multitarea, multiprocesador y centralizado.</label><br>
+                <label><input type="radio" name="p24" value="d"> d. Multiusuario, multitarea, centralizado y multiprocesador.</label>
+            </div>
+            <div class="feedback" id="feedback24"></div>
+        </div>
+
+        <!-- Pregunta 25 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 25:</strong> ¿Una aplicación es lo mismo que un programa?</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p25" value="a"> a. SI.</label><br>
+                <label><input type="radio" name="p25" value="b"> b. Todas las aplicaciones son programas, pero no todos los programas son aplicaciones.</label><br>
+                <label><input type="radio" name="p25" value="c"> c. Todos los programas son aplicaciones, pero no todas las aplicaciones son programas.</label><br>
+                <label><input type="radio" name="p25" value="d"> d. Todos los scripts son aplicaciones.</label>
+            </div>
+            <div class="feedback" id="feedback25"></div>
+        </div>
+
+        <!-- Pregunta 26 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 26:</strong> Un sistema operativo Windows es:</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p26" value="a"> a. Software pirata.</label><br>
+                <label><input type="radio" name="p26" value="b"> b. Software de código abierto.</label><br>
+                <label><input type="radio" name="p26" value="c"> c. Software propietario.</label><br>
+                <label><input type="radio" name="p26" value="d"> d. Software gratuito.</label>
+            </div>
+            <div class="feedback" id="feedback26"></div>
+        </div>
+
+        <!-- Pregunta 27 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 27:</strong> ¿Qué tipo de licencia NO existe?</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p27" value="a"> a. EULA.</label><br>
+                <label><input type="radio" name="p27" value="b"> b. CLUF.</label><br>
+                <label><input type="radio" name="p27" value="c"> c. PLUF.</label><br>
+                <label><input type="radio" name="p27" value="d"> d. GNU/GPL.</label>
+            </div>
+            <div class="feedback" id="feedback27"></div>
+        </div>
+
+        <!-- Botón para calcular la nota -->
+        <button type="button" onclick="calcularNota()">Calcular nota</button>
+    </form>
+
+    <!-- Resultado -->
+    <div class="resultado" id="resultado"></div>
+
+    <script>
+        // Respuestas correctas
+        const respuestasCorrectas = {
+            p16: "b", // Software de usuario, sistema operativo y hardware.
+            p17: "d", // No pueden operar con diferentes sistemas operativos.
+            p18: "c", // USUARIO.
+            p19: "a", // El administrador de archivos.
+            p20: "a", // Ninguna es correcta.
+            p21: "c", // Es un componente de hardware.
+            p22: "d", // Interfaz CLI.
+            p23: "d", // Multiusuario, multitarea, distribuido y monoprocesador.
+            p24: "c", // Monousuario, multitarea, multiprocesador y centralizado.
+            p25: "b", // Todas las aplicaciones son programas, pero no todos los programas son aplicaciones.
+            p26: "c", // Software propietario.
+            p27: "c", // PLUF.
+        };
+
+        // Función para calcular la nota
+        function calcularNota() {
+            let puntuacion = 0;
+            const totalPreguntas = Object.keys(respuestasCorrectas).length;
+
+            // Recorrer las preguntas y comparar respuestas
+            for (const pregunta in respuestasCorrectas) {
+                const respuestaSeleccionada = document.querySelector(`input[name="${pregunta}"]:checked`);
+                const feedbackDiv = document.getElementById(`feedback${pregunta.substring(1)}`);
+
+                if (respuestaSeleccionada) {
+                    if (respuestaSeleccionada.value === respuestasCorrectas[pregunta]) {
+                        puntuacion++;
+                        feedbackDiv.innerHTML = `<span class="correcta">Correcto: ${respuestaSeleccionada.value}</span>`;
+                    } else {
+                        feedbackDiv.innerHTML = `<span class="incorrecta">Incorrecto. La respuesta correcta es: ${respuestasCorrectas[pregunta]}</span>`;
+                    }
+                } else {
+                    feedbackDiv.innerHTML = `<span class="incorrecta">No has seleccionado una respuesta. La respuesta correcta es: ${respuestasCorrectas[pregunta]}</span>`;
+                }
+            }
+
+            // Calcular la nota sobre 10
+            const nota = (puntuacion / totalPreguntas) * 10;
+
+            // Mostrar el resultado
+            const resultadoDiv = document.getElementById("resultado");
+            resultadoDiv.innerHTML = `Tu nota es: <span class="${nota >= 5 ? 'correcta' : 'incorrecta'}">${nota.toFixed(2)}/10</span>`;
+        }
+    </script>
+</body>
+</html>
