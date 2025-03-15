@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test - Preguntas 1 a 15</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Test - Preguntas 1 a 15</h1>
+
+    <form id="testForm">
+        <!-- Pregunta 1 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 1:</strong> Windows utiliza la extensión para conocer el tipo de archivo:</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p1" value="a"> a. Si, siempre</label>
+                <label><input type="radio" name="p1" value="b"> b. No, nunca</label>
+                <label><input type="radio" name="p1" value="c"> c. Depende de la extensión</label>
+                <label><input type="radio" name="p1" value="d"> d. Depende de la aplicación que genera el archivo</label>
+            </div>
+            <div class="feedback" id="feedback1"></div>
+        </div>
+
+        <!-- Pregunta 2 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 2:</strong> Los sistemas operativos que se pueden ejecutar directamente desde una memoria externa se llaman:</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p2" value="a"> a. BOOTCAMP</label>
+                <label><input type="radio" name="p2" value="b"> b. LIVE</label>
+                <label><input type="radio" name="p2" value="c"> c. LILO</label>
+                <label><input type="radio" name="p2" value="d"> d. BOOTMANAGER</label>
+            </div>
+            <div class="feedback" id="feedback2"></div>
+        </div>
+
+        <!-- Pregunta 3 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 3:</strong> ¿Cuál de las siguientes arquitecturas no existe?</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p3" value="a"> a. X86</label>
+                <label><input type="radio" name="p3" value="b"> b. AMD64</label>
+                <label><input type="radio" name="p3" value="c"> c. ARM</label>
+                <label><input type="radio" name="p3" value="d"> d. ARM64</label>
+            </div>
+            <div class="feedback" id="feedback3"></div>
+        </div>
+
+        <!-- Pregunta 4 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 4:</strong> Los ficheros miarchivo.txt y Miarchivo.txt son iguales en Linux:</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p4" value="a"> a. Si</label>
+                <label><input type="radio" name="p4" value="b"> b. No</label>
+                <label><input type="radio" name="p4" value="c"> c. Depende del contenido del archivo</label>
+                <label><input type="radio" name="p4" value="d"> d. Depende de la fecha de creación del archivo</label>
+            </div>
+            <div class="feedback" id="feedback4"></div>
+        </div>
+
+        <!-- Pregunta 5 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 5:</strong> ¿Cuál de los siguientes no es un virtualizador de sistemas?</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p5" value="a"> a. Hyper-v</label>
+                <label><input type="radio" name="p5" value="b"> b. VMWare</label>
+                <label><input type="radio" name="p5" value="c"> c. PLOP</label>
+                <label><input type="radio" name="p5" value="d"> d. ESXI</label>
+            </div>
+            <div class="feedback" id="feedback5"></div>
+        </div>
+
+        <!-- Pregunta 6 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 6:</strong> ¿Qué opción es válida en un sistema Windows para mejorar el rendimiento?</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p6" value="a"> a. Suspensión</label>
+                <label><input type="radio" name="p6" value="b"> b. Hibernación</label>
+                <label><input type="radio" name="p6" value="c"> c. Suspensión Híbrida</label>
+                <label><input type="radio" name="p6" value="d"> d. Limitar cuántos programas se ejecutan al inicio</label>
+            </div>
+            <div class="feedback" id="feedback6"></div>
+        </div>
+
+        <!-- Pregunta 7 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 7:</strong> La GUI (Graphical User Interface) sirve para:</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p7" value="a"> a. Dar al usuario interacción gráfica entre el sistema operativo y el hardware</label>
+                <label><input type="radio" name="p7" value="b"> b. Facilitar la evolución del sistema operativo al usuario</label>
+                <label><input type="radio" name="p7" value="c"> c. Facilitar el aprendizaje del sistema operativo</label>
+                <label><input type="radio" name="p7" value="d"> d. Hacer más competitivo el sistema operativo frente a otros</label>
+            </div>
+            <div class="feedback" id="feedback7"></div>
+        </div>
+
+        <!-- Pregunta 8 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 8:</strong> En un esquema de particiones GPT, ¿qué consideración es verdadera?</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p8" value="a"> a. Podemos tener solo tres particiones primarias y una lógica</label>
+                <label><input type="radio" name="p8" value="b"> b. Podemos tener solo cuatro particiones extendidas</label>
+                <label><input type="radio" name="p8" value="c"> c. Todas las particiones son primarias</label>
+                <label><input type="radio" name="p8" value="d"> d. Podemos tener una partición lógica, una extendida y una primaria</label>
+            </div>
+            <div class="feedback" id="feedback8"></div>
+        </div>
+
+        <!-- Pregunta 9 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 9:</strong> Para optimizar el ahorro de energía podríamos:</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p9" value="a"> a. Desconectar dispositivos USB</label>
+                <label><input type="radio" name="p9" value="b"> b. Aumentar el brillo de la pantalla</label>
+                <label><input type="radio" name="p9" value="c"> c. Elegir un plan de alto rendimiento</label>
+                <label><input type="radio" name="p9" value="d"> d. Dejar por defecto multitud de programas al inicio</label>
+            </div>
+            <div class="feedback" id="feedback9"></div>
+        </div>
+
+        <!-- Pregunta 10 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 10:</strong> Todos los virtualizadores necesitan un sistema operativo para funcionar:</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p10" value="a"> a. Verdadero</label>
+                <label><input type="radio" name="p10" value="b"> b. Falso</label>
+            </div>
+            <div class="feedback" id="feedback10"></div>
+        </div>
+
+        <!-- Pregunta 11 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 11:</strong> El comando de red que nos devuelve el tiempo que tarda en responder un equipo al que queremos conectar se llama:</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p11" value="a"> a. Traceroute</label>
+                <label><input type="radio" name="p11" value="b"> b. Tracert</label>
+                <label><input type="radio" name="p11" value="c"> c. Ping</label>
+                <label><input type="radio" name="p11" value="d"> d. Ipconfig</label>
+            </div>
+            <div class="feedback" id="feedback11"></div>
+        </div>
+
+        <!-- Pregunta 12 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 12:</strong> El proceso de inicio de un sistema operativo es:</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p12" value="a"> a. Login-Núcleo-Procesos y servicios-Aplicaciones</label>
+                <label><input type="radio" name="p12" value="b"> b. Aplicaciones-Login-Procesos y servicios-Núcleo</label>
+                <label><input type="radio" name="p12" value="c"> c. Procesos y servicios-Núcleo-Login-Aplicaciones</label>
+                <label><input type="radio" name="p12" value="d"> d. Núcleo-Procesos y servicios-Login-Aplicaciones</label>
+            </div>
+            <div class="feedback" id="feedback12"></div>
+        </div>
+
+        <!-- Pregunta 13 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 13:</strong> El hardware es todo aquello que puede funcionar sin software:</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p13" value="a"> a. Depende del sistema</label>
+                <label><input type="radio" name="p13" value="b"> b. Falso</label>
+                <label><input type="radio" name="p13" value="c"> c. Depende del hardware</label>
+                <label><input type="radio" name="p13" value="d"> d. Depende del Software</label>
+            </div>
+            <div class="feedback" id="feedback13"></div>
+        </div>
+
+        <!-- Pregunta 14 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 14:</strong> En Linux se puede utilizar la contrabarra (\) en el nombre de los ficheros:</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p14" value="a"> a. Depende del archivo</label>
+                <label><input type="radio" name="p14" value="b"> b. Depende de la ubicación del archivo</label>
+                <label><input type="radio" name="p14" value="c"> c. Si, siempre</label>
+                <label><input type="radio" name="p14" value="d"> d. No, nunca</label>
+            </div>
+            <div class="feedback" id="feedback14"></div>
+        </div>
+
+        <!-- Pregunta 15 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 15:</strong> Si instalamos una aplicación empleando el Shell de Linux:</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p15" value="a"> a. Hay que desinstalarlo desde la shell</label>
+                <label><input type="radio" name="p15" value="b"> b. Podemos desinstalarla tanto desde el entorno gráfico como desde la shell</label>
+                <label><input type="radio" name="p15" value="c"> c. Podemos desinstalarla desde el entorno gráfico</label>
+                <label><input type="radio" name="p15" value="d"> d. Todas son falsas</label>
+            </div>
+            <div class="feedback" id="feedback15"></div>
+        </div>
+
+        <!-- Botón para calcular la nota -->
+        <button type="button" onclick="calcularNota()">Calcular nota</button>
+    </form>
+
+    <!-- Resultado -->
+    <div class="resultado" id="resultado"></div>
+
+    <script>
+        // Respuestas correctas
+        const respuestasCorrectas = {
+            p1: "c", // Depende de la extensión.
+            p2: "b", // LIVE.
+            p3: "d", // ARM64.
+            p4: "b", // No.
+            p5: "c", // PLOP.
+            p6: "d", // Limitar cuántos programas se ejecutan al inicio.
+            p7: "a", // Dar al usuario interacción gráfica entre el sistema operativo y el hardware.
+            p8: "c", // Todas las particiones son primarias.
+            p9: "a", // Desconectar dispositivos USB.
+            p10: "b", // Falso.
+            p11: "c", // Ping.
+            p12: "d", // Núcleo-Procesos y servicios-Login-Aplicaciones.
+            p13: "b", // Falso.
+            p14: "d", // No, nunca.
+            p15: "b", // Podemos desinstalarla tanto desde el entorno gráfico como desde la shell.
+        };
+
+        // Función para calcular la nota
+        function calcularNota() {
+            let puntuacion = 0;
+            const totalPreguntas = Object.keys(respuestasCorrectas).length;
+
+            // Recorrer las preguntas y comparar respuestas
+            for (const pregunta in respuestasCorrectas) {
+                const respuestaSeleccionada = document.querySelector(`input[name="${pregunta}"]:checked`);
+                const feedbackDiv = document.getElementById(`feedback${pregunta.substring(1)}`);
+
+                if (respuestaSeleccionada) {
+                    if (respuestaSeleccionada.value === respuestasCorrectas[pregunta]) {
+                        puntuacion++;
+                        feedbackDiv.innerHTML = `<span class="correcta">Correcto: ${respuestaSeleccionada.value}</span>`;
+                    } else {
+                        feedbackDiv.innerHTML = `<span class="incorrecta">Incorrecto. La respuesta correcta es: ${respuestasCorrectas[pregunta]}</span>`;
+                    }
+                } else {
+                    feedbackDiv.innerHTML = `<span class="incorrecta">No has seleccionado una respuesta. La respuesta correcta es: ${respuestasCorrectas[pregunta]}</span>`;
+                }
+            }
+
+            // Calcular la nota sobre 10
+            const nota = (puntuacion / totalPreguntas) * 10;
+
+            // Mostrar el resultado
+            const resultadoDiv = document.getElementById("resultado");
+            resultadoDiv.innerHTML = `Tu nota es: <span class="${nota >= 5 ? 'correcta' : 'incorrecta'}">${nota.toFixed(2)}/10</span>`;
+        }
+    </script>
+</body>
+</html>
