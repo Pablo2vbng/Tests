@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test - Cuestionario SQL JOINs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Test - Cuestionario SQL JOINs</h1>
+
+    <form id="testForm">
+        <!-- Pregunta 1 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 1:</strong> En SQL, ¿qué tipo de JOIN devuelve todas las filas de ambas tablas, emparejando las filas según una condición especificada?</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p1" value="a"> a) INNER JOIN</label>
+                <label><input type="radio" name="p1" value="b"> b) LEFT JOIN</label>
+                <label><input type="radio" name="p1" value="c"> c) FULL JOIN</label>
+                <label><input type="radio" name="p1" value="d"> d) CROSS JOIN</label>
+            </div>
+            <div class="feedback" id="feedback1"></div>
+        </div>
+
+        <!-- Pregunta 2 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 2:</strong> ¿Qué tipo de JOIN en SQL devuelve todas las filas de la tabla izquierda y las filas coincidentes de la tabla derecha, si las hay?</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p2" value="a"> a) INNER JOIN</label>
+                <label><input type="radio" name="p2" value="b"> b) LEFT JOIN</label>
+                <label><input type="radio" name="p2" value="c"> c) RIGHT JOIN</label>
+                <label><input type="radio" name="p2" value="d"> d) OUTER JOIN</label>
+            </div>
+            <div class="feedback" id="feedback2"></div>
+        </div>
+
+        <!-- Pregunta 3 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 3:</strong> ¿Qué diferencia hay entre INNER JOIN y OUTER JOIN en SQL?</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p3" value="a"> a) INNER JOIN devuelve solo las filas coincidentes, mientras que OUTER JOIN devuelve todas las filas de al menos una de las tablas.</label>
+                <label><input type="radio" name="p3" value="b"> b) INNER JOIN devuelve todas las filas de ambas tablas, mientras que OUTER JOIN devuelve solo las filas coincidentes.</label>
+                <label><input type="radio" name="p3" value="c"> c) INNER JOIN solo se puede utilizar con tablas relacionadas, mientras que OUTER JOIN se puede utilizar con cualquier tabla.</label>
+                <label><input type="radio" name="p3" value="d"> d) No hay diferencia, ambos tipos de JOIN hacen lo mismo.</label>
+            </div>
+            <div class="feedback" id="feedback3"></div>
+        </div>
+
+        <!-- Pregunta 4 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 4:</strong> ¿Qué tipo de JOIN en SQL combina cada fila de la primera tabla con todas las filas de la segunda tabla, generando un producto cartesiano?</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p4" value="a"> a) INNER JOIN</label>
+                <label><input type="radio" name="p4" value="b"> b) LEFT JOIN</label>
+                <label><input type="radio" name="p4" value="c"> c) RIGHT JOIN</label>
+                <label><input type="radio" name="p4" value="d"> d) CROSS JOIN</label>
+            </div>
+            <div class="feedback" id="feedback4"></div>
+        </div>
+
+        <!-- Pregunta 5 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 5:</strong> En una consulta SQL que utiliza JOINs, ¿cuál es la cláusula utilizada para especificar la condición de unión?</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p5" value="a"> a) WHERE</label>
+                <label><input type="radio" name="p5" value="b"> b) ON</label>
+                <label><input type="radio" name="p5" value="c"> c) AND</label>
+                <label><input type="radio" name="p5" value="d"> d) JOIN</label>
+            </div>
+            <div class="feedback" id="feedback5"></div>
+        </div>
+
+        <!-- Botón para calcular la nota -->
+        <button type="button" onclick="calcularNota()">Calcular nota</button>
+    </form>
+
+    <!-- Resultado -->
+    <div class="resultado" id="resultado"></div>
+
+    <script>
+        // Respuestas correctas
+        const respuestasCorrectas = {
+            p1: "c", // FULL JOIN.
+            p2: "b", // LEFT JOIN.
+            p3: "a", // INNER JOIN devuelve solo las filas coincidentes, mientras que OUTER JOIN devuelve todas las filas de al menos una de las tablas.
+            p4: "d", // CROSS JOIN.
+            p5: "b", // ON.
+        };
+
+        // Función para calcular la nota
+        function calcularNota() {
+            let puntuacion = 0;
+            const totalPreguntas = Object.keys(respuestasCorrectas).length;
+
+            // Recorrer las preguntas y comparar respuestas
+            for (const pregunta in respuestasCorrectas) {
+                const respuestaSeleccionada = document.querySelector(`input[name="${pregunta}"]:checked`);
+                const feedbackDiv = document.getElementById(`feedback${pregunta.substring(1)}`);
+
+                if (respuestaSeleccionada) {
+                    if (respuestaSeleccionada.value === respuestasCorrectas[pregunta]) {
+                        puntuacion++;
+                        feedbackDiv.innerHTML = `<span class="correcta">Correcto: ${respuestaSeleccionada.value}</span>`;
+                    } else {
+                        feedbackDiv.innerHTML = `<span class="incorrecta">Incorrecto. La respuesta correcta es: ${respuestasCorrectas[pregunta]}</span>`;
+                    }
+                } else {
+                    feedbackDiv.innerHTML = `<span class="incorrecta">No has seleccionado una respuesta. La respuesta correcta es: ${respuestasCorrectas[pregunta]}</span>`;
+                }
+            }
+
+            // Calcular la nota sobre 10
+            const nota = (puntuacion / totalPreguntas) * 10;
+
+            // Mostrar el resultado
+            const resultadoDiv = document.getElementById("resultado");
+            resultadoDiv.innerHTML = `Tu nota es: <span class="${nota >= 5 ? 'correcta' : 'incorrecta'}">${nota.toFixed(2)}/10</span>`;
+        }
+    </script>
+</body>
+</html>

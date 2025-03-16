@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test - Cuestionario SQL</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Test - Cuestionario SQL</h1>
+
+    <form id="testForm">
+        <!-- Pregunta 1 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 1:</strong> Señala la cláusula ORDER BY correcta para ordenar por nombre ascendente, y en el caso que coincidan que se subordene por edad descendente:</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p1" value="a"> A. ORDER BY NOMBRE, EDAD DESC.</label>
+                <label><input type="radio" name="p1" value="b"> B. ORDER BY NOMBRE AND ORDER BY EDAD DESC.</label>
+                <label><input type="radio" name="p1" value="c"> C. ORDER BY NOMBRE ASC => EDAD DESC.</label>
+                <label><input type="radio" name="p1" value="d"> D. NINGUNA ES CORRECTA.</label>
+            </div>
+            <div class="feedback" id="feedback1"></div>
+        </div>
+
+        <!-- Pregunta 2 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 2:</strong> Dada la siguiente definición de datos en MySQL:</p>
+            <pre>
+CREATE TABLE PERSONAS(
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    NOMBRE VARCHAR(255),
+    EDAD INT,
+    SALARIO DECIMAL(10,2)
+)
+            </pre>
+            <p>Señala la sentencia correcta que no contenga ningún error.</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p2" value="a"> A. INSERT INTO PERSONAS (ID, NOMBRE, EDAD, SALARIO) VALUES (NULL, PEPE, 23, 34,5);</label>
+                <label><input type="radio" name="p2" value="b"> B. INSERT INTO PERSONAS (ID, NOMBRE, EDAD, SALARIO) VALUES (1,’PEPE’,34.5);</label>
+                <label><input type="radio" name="p2" value="c"> C. INSERT INTO PERSONA (NOMBRE, EDAD, SALARIO) VALUES (‘PEPE’,23,34.5);</label>
+                <label><input type="radio" name="p2" value="d"> D. NINGUNA ES CORRECTA.</label>
+            </div>
+            <div class="feedback" id="feedback2"></div>
+        </div>
+
+        <!-- Pregunta 3 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 3:</strong> Los eventos DML que pueden disparar un TRIGGER son:</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p3" value="a"> A. SELECT, ALTER y DROP</label>
+                <label><input type="radio" name="p3" value="b"> B. SELECT, INSERT, UPDATE</label>
+                <label><input type="radio" name="p3" value="c"> C. INSERT, UPDATE y DELETE</label>
+                <label><input type="radio" name="p3" value="d"> D. UPDATE, INSERT, ALTER y DELETE</label>
+            </div>
+            <div class="feedback" id="feedback3"></div>
+        </div>
+
+        <!-- Pregunta 4 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 4:</strong> ¿Cuál de los siguientes JOINs incluye todas las filas de ambas tablas, sin importar si hay correspondencias entre las claves de unión?</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p4" value="a"> A. INNER JOIN</label>
+                <label><input type="radio" name="p4" value="b"> B. LEFT JOIN</label>
+                <label><input type="radio" name="p4" value="c"> C. RIGHT JOIN</label>
+                <label><input type="radio" name="p4" value="d"> D. FULL JOIN</label>
+            </div>
+            <div class="feedback" id="feedback4"></div>
+        </div>
+
+        <!-- Botón para calcular la nota -->
+        <button type="button" onclick="calcularNota()">Calcular nota</button>
+    </form>
+
+    <!-- Resultado -->
+    <div class="resultado" id="resultado"></div>
+
+    <script>
+        // Respuestas correctas
+        const respuestasCorrectas = {
+            p1: "a", // ORDER BY NOMBRE, EDAD DESC.
+            p2: "d", // NINGUNA ES CORRECTA.
+            p3: "c", // INSERT, UPDATE y DELETE.
+            p4: "d", // FULL JOIN.
+        };
+
+        // Función para calcular la nota
+        function calcularNota() {
+            let puntuacion = 0;
+            const totalPreguntas = Object.keys(respuestasCorrectas).length;
+
+            // Recorrer las preguntas y comparar respuestas
+            for (const pregunta in respuestasCorrectas) {
+                const respuestaSeleccionada = document.querySelector(`input[name="${pregunta}"]:checked`);
+                const feedbackDiv = document.getElementById(`feedback${pregunta.substring(1)}`);
+
+                if (respuestaSeleccionada) {
+                    if (respuestaSeleccionada.value === respuestasCorrectas[pregunta]) {
+                        puntuacion++;
+                        feedbackDiv.innerHTML = `<span class="correcta">Correcto: ${respuestaSeleccionada.value}</span>`;
+                    } else {
+                        feedbackDiv.innerHTML = `<span class="incorrecta">Incorrecto. La respuesta correcta es: ${respuestasCorrectas[pregunta]}</span>`;
+                    }
+                } else {
+                    feedbackDiv.innerHTML = `<span class="incorrecta">No has seleccionado una respuesta. La respuesta correcta es: ${respuestasCorrectas[pregunta]}</span>`;
+                }
+            }
+
+            // Calcular la nota sobre 10
+            const nota = (puntuacion / totalPreguntas) * 10;
+
+            // Mostrar el resultado
+            const resultadoDiv = document.getElementById("resultado");
+            resultadoDiv.innerHTML = `Tu nota es: <span class="${nota >= 5 ? 'correcta' : 'incorrecta'}">${nota.toFixed(2)}/10</span>`;
+        }
+    </script>
+</body>
+</html>

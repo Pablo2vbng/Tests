@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test - Cuestionario SQL Avanzado</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Test - Cuestionario SQL Avanzado</h1>
+
+    <form id="testForm">
+        <!-- Pregunta 1 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 1:</strong> Monitorizar la base de datos permite:</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p1" value="a"> a. Detectar redes congestionadas por exceso de tráfico.</label>
+                <label><input type="radio" name="p1" value="b"> b. Detectar problemas de normalización en el diseño.</label>
+                <label><input type="radio" name="p1" value="c"> c. Ninguna de las anteriores.</label>
+                <label><input type="radio" name="p1" value="d"> d. Las dos anteriores.</label>
+            </div>
+            <div class="feedback" id="feedback1"></div>
+        </div>
+
+        <!-- Pregunta 2 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 2:</strong> CONCAT:</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p2" value="a"> a. Es una función DDL.</label>
+                <label><input type="radio" name="p2" value="b"> b. Es una función exclusiva de Oracle.</label>
+                <label><input type="radio" name="p2" value="c"> c. Sirve para unir cadenas de texto.</label>
+                <label><input type="radio" name="p2" value="d"> d. Todas son correctas.</label>
+            </div>
+            <div class="feedback" id="feedback2"></div>
+        </div>
+
+        <!-- Pregunta 3 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 3:</strong> Un sistema que administra múltiples bases de datos en múltiples sistemas:</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p3" value="a"> a. Todas las anteriores.</label>
+                <label><input type="radio" name="p3" value="b"> b. Es un sistema centralizado.</label>
+                <label><input type="radio" name="p3" value="c"> c. Es un sistema distribuido.</label>
+                <label><input type="radio" name="p3" value="d"> d. Es un sistema cloud.</label>
+            </div>
+            <div class="feedback" id="feedback3"></div>
+        </div>
+
+        <!-- Pregunta 4 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 4:</strong> Según el RGPD - 2016, los datos personales deben:</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p4" value="a"> a. Ser exactos.</label>
+                <label><input type="radio" name="p4" value="b"> b. Todas son correctas.</label>
+                <label><input type="radio" name="p4" value="c"> c. Ser guardados en copias de seguridad para siempre.</label>
+                <label><input type="radio" name="p4" value="d"> d. Ser tratados garantizando la más alta accesibilidad a ellos por todo el personal.</label>
+            </div>
+            <div class="feedback" id="feedback4"></div>
+        </div>
+
+        <!-- Pregunta 5 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 5:</strong> Para realizar un filtro después de usar GROUP BY, usamos:</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p5" value="a"> a. WHERE</label>
+                <label><input type="radio" name="p5" value="b"> b. DISTINCT</label>
+                <label><input type="radio" name="p5" value="c"> c. Ninguna es correcta</label>
+                <label><input type="radio" name="p5" value="d"> d. FILTER BY</label>
+            </div>
+            <div class="feedback" id="feedback5"></div>
+        </div>
+
+        <!-- Pregunta 6 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 6:</strong> ¿Cuál de las siguientes sentencias SQL se utiliza para insertar datos en una tabla en Oracle?</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p6" value="a"> a. INSERT INTO</label>
+                <label><input type="radio" name="p6" value="b"> b. INSERT ON</label>
+                <label><input type="radio" name="p6" value="c"> c. APPEND ON</label>
+                <label><input type="radio" name="p6" value="d"> d. ADD INTO</label>
+            </div>
+            <div class="feedback" id="feedback6"></div>
+        </div>
+
+        <!-- Pregunta 7 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 7:</strong> En cuanto al tratamiento de los datos, la minería de datos forma parte fundamental de la etapa:</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p7" value="a"> a. Interpretación de resultados.</label>
+                <label><input type="radio" name="p7" value="b"> b. Ninguna de las anteriores.</label>
+                <label><input type="radio" name="p7" value="c"> c. Adquisición de datos.</label>
+                <label><input type="radio" name="p7" value="d"> d. Mejoramiento de datos.</label>
+            </div>
+            <div class="feedback" id="feedback7"></div>
+        </div>
+
+        <!-- Pregunta 8 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 8:</strong> Este criterio se refiere a la capacidad de una base de datos para continuar funcionando incluso si algunos de los componentes fallan:</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p8" value="a"> a. Balanceo de carga</label>
+                <label><input type="radio" name="p8" value="b"> b. Ninguno de los anteriores</label>
+                <label><input type="radio" name="p8" value="c"> c. Escalabilidad</label>
+                <label><input type="radio" name="p8" value="d"> d. Depuración de fallos</label>
+            </div>
+            <div class="feedback" id="feedback8"></div>
+        </div>
+
+        <!-- Pregunta 9 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 9:</strong> ¿Qué cláusula se utiliza en una sentencia SQL UPDATE para especificar qué filas deben actualizarse en Oracle?</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p9" value="a"> a. APPEND</label>
+                <label><input type="radio" name="p9" value="b"> b. ALTER</label>
+                <label><input type="radio" name="p9" value="c"> c. WHERE</label>
+                <label><input type="radio" name="p9" value="d"> d. SET</label>
+            </div>
+            <div class="feedback" id="feedback9"></div>
+        </div>
+
+        <!-- Pregunta 10 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 10:</strong> Para mejorar el rendimiento de las consultas desde el punto de vista de la optimización se usa:</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p10" value="a"> a. WHERE</label>
+                <label><input type="radio" name="p10" value="b"> b. INNER JOIN</label>
+                <label><input type="radio" name="p10" value="c"> c. LEFT OUTER JOIN</label>
+                <label><input type="radio" name="p10" value="d"> d. SELECT *</label>
+            </div>
+            <div class="feedback" id="feedback10"></div>
+        </div>
+
+        <!-- Botón para calcular la nota -->
+        <button type="button" onclick="calcularNota()">Calcular nota</button>
+    </form>
+
+    <!-- Resultado -->
+    <div class="resultado" id="resultado"></div>
+
+    <script>
+        // Respuestas correctas
+        const respuestasCorrectas = {
+            p1: "d", // Las dos anteriores.
+            p2: "c", // Sirve para unir cadenas de texto.
+            p3: "c", // Es un sistema distribuido.
+            p4: "a", // Ser exactos.
+            p5: "c", // Ninguna es correcta.
+            p6: "a", // INSERT INTO.
+            p7: "b", // Ninguna de las anteriores.
+            p8: "b", // Ninguno de los anteriores.
+            p9: "d", // SET.
+            p10: "a", // WHERE.
+        };
+
+        // Función para calcular la nota
+        function calcularNota() {
+            let puntuacion = 0;
+            const totalPreguntas = Object.keys(respuestasCorrectas).length;
+
+            // Recorrer las preguntas y comparar respuestas
+            for (const pregunta in respuestasCorrectas) {
+                const respuestaSeleccionada = document.querySelector(`input[name="${pregunta}"]:checked`);
+                const feedbackDiv = document.getElementById(`feedback${pregunta.substring(1)}`);
+
+                if (respuestaSeleccionada) {
+                    if (respuestaSeleccionada.value === respuestasCorrectas[pregunta]) {
+                        puntuacion++;
+                        feedbackDiv.innerHTML = `<span class="correcta">Correcto: ${respuestaSeleccionada.value}</span>`;
+                    } else {
+                        feedbackDiv.innerHTML = `<span class="incorrecta">Incorrecto. La respuesta correcta es: ${respuestasCorrectas[pregunta]}</span>`;
+                    }
+                } else {
+                    feedbackDiv.innerHTML = `<span class="incorrecta">No has seleccionado una respuesta. La respuesta correcta es: ${respuestasCorrectas[pregunta]}</span>`;
+                }
+            }
+
+            // Calcular la nota sobre 10
+            const nota = (puntuacion / totalPreguntas) * 10;
+
+            // Mostrar el resultado
+            const resultadoDiv = document.getElementById("resultado");
+            resultadoDiv.innerHTML = `Tu nota es: <span class="${nota >= 5 ? 'correcta' : 'incorrecta'}">${nota.toFixed(2)}/10</span>`;
+        }
+    </script>
+</body>
+</html>

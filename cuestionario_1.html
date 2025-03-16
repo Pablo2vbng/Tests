@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test - Cuestionario SQL</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Test - Cuestionario SQL</h1>
+
+    <form id="testForm">
+        <!-- Pregunta 1 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 1:</strong> Los comandos DML son:</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p1" value="a"> a. SELECT, INSERT, UPDATE y DROP</label>
+                <label><input type="radio" name="p1" value="b"> b. SELECT, INSERT, ALTER y DELETE</label>
+                <label><input type="radio" name="p1" value="c"> c. CREATE, INSERT, UPDATE y DELETE</label>
+                <label><input type="radio" name="p1" value="d"> d. SELECT, INSERT, UPDATE y DELETE</label>
+            </div>
+            <div class="feedback" id="feedback1"></div>
+        </div>
+
+        <!-- Pregunta 2 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 2:</strong> ¿Es correcta esta sentencia? INSERT INTO PERSONAS (ID, NOMBRE, EDAD, SALARIO) VALUES (NULL, 'PEPE', 23, 34,5);</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p2" value="a"> a. SI</label>
+                <label><input type="radio" name="p2" value="b"> b. NO</label>
+            </div>
+            <div class="feedback" id="feedback2"></div>
+        </div>
+
+        <!-- Pregunta 3 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 3:</strong> ¿Cuál es la forma correcta de escribir una sentencia SQL para seleccionar todos los campos de una tabla llamada "clientes"?</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p3" value="a"> a. SELECT *</label>
+                <label><input type="radio" name="p3" value="b"> b. SELECT ALL</label>
+                <label><input type="radio" name="p3" value="c"> c. SELECT TOP</label>
+                <label><input type="radio" name="p3" value="d"> d. SELECT COLUMN</label>
+            </div>
+            <div class="feedback" id="feedback3"></div>
+        </div>
+
+        <!-- Pregunta 4 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 4:</strong> SQL es:</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p4" value="a"> a. un lenguaje de programación estandarizado que se utiliza para administrar y explotar bases de datos no relacionales.</label>
+                <label><input type="radio" name="p4" value="b"> b. un lenguaje de programación estandarizado que se utiliza para administrar y explotar bases de datos relacionales.</label>
+                <label><input type="radio" name="p4" value="c"> c. un lenguaje de programación no estandarizado que se utiliza para administrar y explotar bases de datos relacionales.</label>
+                <label><input type="radio" name="p4" value="d"> d. es un software en el cual delegar tareas y automatizarlas. Tareas tales como: almacenar los datos, buscar los datos y mostrarlos, mantener la integridad de los datos.</label>
+            </div>
+            <div class="feedback" id="feedback4"></div>
+        </div>
+
+        <!-- Pregunta 5 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 5:</strong> ¿Cuál es la sentencia SQL utilizada para eliminar registros de una tabla?</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p5" value="a"> a. UNIQUE</label>
+                <label><input type="radio" name="p5" value="b"> b. DISTINCT</label>
+                <label><input type="radio" name="p5" value="c"> c. DELETE</label>
+                <label><input type="radio" name="p5" value="d"> d. DROP</label>
+            </div>
+            <div class="feedback" id="feedback5"></div>
+        </div>
+
+        <!-- Pregunta 6 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 6:</strong> ¿Cuál es la sentencia SQL utilizada para obtener la cantidad total de ventas por categoría de producto, ordenadas de forma descendente por la cantidad total?</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p6" value="a"> a. SELECT categoria, MAX(cantidad) AS total FROM ventas GROUP BY categoria ORDER BY total DESC</label>
+                <label><input type="radio" name="p6" value="b"> b. SELECT categoria, AVG(cantidad) AS total FROM ventas GROUP BY categoria ORDER BY total DESC</label>
+                <label><input type="radio" name="p6" value="c"> c. SELECT categoria, SUM(cantidad) AS total FROM ventas GROUP BY categoria ORDER BY total DESC</label>
+                <label><input type="radio" name="p6" value="d"> d. SELECT categoria, COUNT(cantidad) AS total FROM ventas GROUP BY categoria ORDER BY total ASC</label>
+            </div>
+            <div class="feedback" id="feedback6"></div>
+        </div>
+
+        <!-- Pregunta 7 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 7:</strong> Una base de datos relacional:</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p7" value="a"> a. Es una colección de datos organizados en tablas, donde cada tabla consiste en filas y columnas.</label>
+                <label><input type="radio" name="p7" value="b"> b. Es un conjunto de símbolos que tienen sentido solo si se les relaciona con un contexto determinado.</label>
+                <label><input type="radio" name="p7" value="c"> c. Se basan en modelos de datos no tabulares, como documentos, gráficos o valores-clave.</label>
+                <label><input type="radio" name="p7" value="d"> d. Son datos integrados en un contexto determinado.</label>
+            </div>
+            <div class="feedback" id="feedback7"></div>
+        </div>
+
+        <!-- Pregunta 8 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 8:</strong> Los comandos DDL son:</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p8" value="a"> a. CREATE, ALTER Y SELECT.</label>
+                <label><input type="radio" name="p8" value="b"> b. CREATE, ALTER Y DROP.</label>
+                <label><input type="radio" name="p8" value="c"> c. CREATE, INSERT Y DROP.</label>
+                <label><input type="radio" name="p8" value="d"> d. SELECT, ALTER Y DROP.</label>
+            </div>
+            <div class="feedback" id="feedback8"></div>
+        </div>
+
+        <!-- Pregunta 9 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 9:</strong> Una base de datos es:</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p9" value="a"> a. Son datos integrados en un contexto determinado.</label>
+                <label><input type="radio" name="p9" value="b"> b. Una serie de datos organizados y relacionados entre sí, los cuales son recolectados y explotados por los sistemas de información de una empresa o negocio en particular.</label>
+                <label><input type="radio" name="p9" value="c"> c. Conjunto de programas para acceder a datos.</label>
+                <label><input type="radio" name="p9" value="d"> d. Es un software en el cual delegar tareas y automatizarlas. Tareas tales como: almacenar los datos, buscar los datos y mostrarlos, mantener la integridad de los datos.</label>
+            </div>
+            <div class="feedback" id="feedback9"></div>
+        </div>
+
+        <!-- Pregunta 10 -->
+        <div class="pregunta">
+            <p><strong>Pregunta 10:</strong> Un SGBD es:</p>
+            <div class="respuesta">
+                <label><input type="radio" name="p10" value="a"> a. Es un software en el cual delegar tareas y automatizarlas. Tareas tales como: almacenar los datos, buscar los datos y mostrarlos, mantener la integridad de los datos.</label>
+                <label><input type="radio" name="p10" value="b"> b. Una serie de datos organizados y relacionados entre sí, los cuales son recolectados y explotados por los sistemas de información de una empresa o negocio en particular.</label>
+                <label><input type="radio" name="p10" value="c"> c. Es un software que no se puede modificar.</label>
+                <label><input type="radio" name="p10" value="d"> d. Conjunto de símbolos que tienen sentido solo si se les relaciona con un contexto determinado.</label>
+            </div>
+            <div class="feedback" id="feedback10"></div>
+        </div>
+
+        <!-- Botón para calcular la nota -->
+        <button type="button" onclick="calcularNota()">Calcular nota</button>
+    </form>
+
+    <!-- Resultado -->
+    <div class="resultado" id="resultado"></div>
+
+    <script>
+        // Respuestas correctas
+        const respuestasCorrectas = {
+            p1: "d", // SELECT, INSERT, UPDATE y DELETE.
+            p2: "b", // NO.
+            p3: "a", // SELECT *.
+            p4: "b", // un lenguaje de programación estandarizado que se utiliza para administrar y explotar bases de datos relacionales.
+            p5: "c", // DELETE.
+            p6: "c", // SELECT categoria, SUM(cantidad) AS total FROM ventas GROUP BY categoria ORDER BY total DESC.
+            p7: "a", // Es una colección de datos organizados en tablas, donde cada tabla consiste en filas y columnas.
+            p8: "b", // CREATE, ALTER Y DROP.
+            p9: "b", // Una serie de datos organizados y relacionados entre sí, los cuales son recolectados y explotados por los sistemas de información de una empresa o negocio en particular.
+            p10: "a", // Es un software en el cual delegar tareas y automatizarlas. Tareas tales como: almacenar los datos, buscar los datos y mostrarlos, mantener la integridad de los datos.
+        };
+
+        // Función para calcular la nota
+        function calcularNota() {
+            let puntuacion = 0;
+            const totalPreguntas = Object.keys(respuestasCorrectas).length;
+
+            // Recorrer las preguntas y comparar respuestas
+            for (const pregunta in respuestasCorrectas) {
+                const respuestaSeleccionada = document.querySelector(`input[name="${pregunta}"]:checked`);
+                const feedbackDiv = document.getElementById(`feedback${pregunta.substring(1)}`);
+
+                if (respuestaSeleccionada) {
+                    if (respuestaSeleccionada.value === respuestasCorrectas[pregunta]) {
+                        puntuacion++;
+                        feedbackDiv.innerHTML = `<span class="correcta">Correcto: ${respuestaSeleccionada.value}</span>`;
+                    } else {
+                        feedbackDiv.innerHTML = `<span class="incorrecta">Incorrecto. La respuesta correcta es: ${respuestasCorrectas[pregunta]}</span>`;
+                    }
+                } else {
+                    feedbackDiv.innerHTML = `<span class="incorrecta">No has seleccionado una respuesta. La respuesta correcta es: ${respuestasCorrectas[pregunta]}</span>`;
+                }
+            }
+
+            // Calcular la nota sobre 10
+            const nota = (puntuacion / totalPreguntas) * 10;
+
+            // Mostrar el resultado
+            const resultadoDiv = document.getElementById("resultado");
+            resultadoDiv.innerHTML = `Tu nota es: <span class="${nota >= 5 ? 'correcta' : 'incorrecta'}">${nota.toFixed(2)}/10</span>`;
+        }
+    </script>
+</body>
+</html>
